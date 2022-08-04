@@ -5,37 +5,37 @@ const homeEl = document.getElementById("home-el")
 const guestEl = document.getElementById("guest-el")  
 
 
-const add1 = () => {
+const homeAdd1 = () => {
     homeScore += 1
     homeEl.textContent = homeScore;
     board()
 }
 
-const add2 = () => {
+const homeAdd2 = () => {
     homeScore += 2
     homeEl.textContent = homeScore;
     board()
 }
 
-const add3 = () => {
+const homeAdd3 = () => {
     homeScore += 3
     homeEl.textContent = homeScore;
     board()
 }
 
-const add4 = () => {
+const guestAdd1 = () => {
     guestScore += 1
     guestEl.textContent = guestScore;
     board()
 }
 
-const add5 = () => {
+const guestAdd2 = () => {
     guestScore += 2
     guestEl.textContent = guestScore;
     board()
 }
 
-const add6 = () => {
+const guestAdd3 = () => {
     guestScore += 3
     guestEl.textContent = guestScore;
     board()
