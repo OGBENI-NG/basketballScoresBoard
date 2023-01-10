@@ -2,52 +2,53 @@ let homeScore = 0;
 let guestScore = 0;
 const boardEl = document.getElementById("board-el")
 const homeEl = document.getElementById("home-el")
-const guestEl = document.getElementById("guest-el")  
+const guestEl = document.getElementById("guest-el")
+let scoreTurn = true
 
 
-const homeAdd1 = () => {
+const home1Score = () => {
     homeScore += 1
     homeEl.textContent = homeScore;
     board()
 }
 
-const homeAdd2 = () => {
+const home2Score = () => {
     homeScore += 2
     homeEl.textContent = homeScore;
     board()
 }
 
-const homeAdd3 = () => {
+const home3Score = () => {
     homeScore += 3
     homeEl.textContent = homeScore;
     board()
 }
 
-const guestAdd1 = () => {
+const guest1Score = () => {
     guestScore += 1
     guestEl.textContent = guestScore;
     board()
 }
 
-const guestAdd2 = () => {
+const guest2Score = () => {
     guestScore += 2
     guestEl.textContent = guestScore;
     board()
 }
 
-const guestAdd3 = () => {
+const guest3Score = () => {
     guestScore += 3
     guestEl.textContent = guestScore;
     board()
 }
 
 const board = () => {
-    if(homeEl.textContent > 0 ) {
-        boardEl.textContent = "HOME TEAM GOAL..."
-    } else if(guestEl.textContent > 0) {
-        boardEl.textContent = "GUEST TEAM GOAL..."
-    } 
-    return boardEl
+    if(scoreTurn) {
+        boardEl.textContent = 'HOME TEAM GOAL...'
+    } else {
+        boardEl.textContent =`GUEST TEAM GOAL...`
+    }
+    scoreTurn = !scoreTurn
 }
 
 
